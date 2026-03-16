@@ -12,3 +12,6 @@ This repository is home for my small frontend projects, where I keep all the pro
 - [W3Schools](https://www.w3schools.com/) for the tutorials
 - [freecodecamp.org](https://www.freecodecamp.org/) for teaching the basics
 - *more added later*
+
+## Project URL
+- https://roadmap.sh/projects/single-page-cv
