@@ -1,5 +1,4 @@
 # Zen's Frontend Projects
-Some small projects I do to improve my frontend developing skills.
 ---
 ## About
 This repository is home for my small frontend projects, where I keep all the progress from doing small easy projects to the more advanced.
