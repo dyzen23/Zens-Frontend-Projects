@@ -1,5 +1,5 @@
 # Zen's Frontend Projects
----
+
 ## About
 This repository is home for my small frontend projects, where I keep all the progress from doing small easy projects to the more advanced.
 
