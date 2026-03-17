@@ -1,6 +1,7 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Dyna Zenta - Basic Website",
+    "short_name": "Dyzen",
+    "start_url": "/Zens-Frontend-Projects/Basic-HTML-Site/",
     "icons": [
         {
             "src": "/Zens-Frontend-Projects/Basic-HTML-Site/media/favicons/android-chrome-192x192.png",
@@ -13,7 +14,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#292c3c",
+    "background_color": "#303446",
     "display": "standalone"
 }
