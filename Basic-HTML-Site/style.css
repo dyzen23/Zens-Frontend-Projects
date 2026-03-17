@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cascadia Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #c6d0f5;
+    background-color: #303446;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#headicon {
+    width: 2.25rem;
+    height: 2.25rem;
+}
+
+#headicon path {
+    width: 2.25rem;
+    fill: #e5c890;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #292c3c;
+    padding: 2rem;
+}
+
+.titlebar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.titlebar p {
+    text-align: left;
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #81c8be;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar p {
+    font-size: 1.5rem;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar a:link,
+.navbar a:visited {
+    color: #c6d0f5;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #c6d0f5;
+    text-shadow: 0 0 10px #c6d0f5;
+}
+
+.navbar p::after {
+    content: " /";
+}
+
+/* remove slash from the last item */
+.navbar p:last-child::after {
+    content: "";
+}
+
+main {
+    padding: 2rem;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+main div.content {
+    width: 50rem;
+}
+
+main h1 {
+    color: #ca9ee6;
+    margin: 1rem 0 1rem 0;
+}
+
+main h2 {
+    color: #e78284;
+    margin: 0.75rem 0 0.75rem 0;
+}
+
+main h3 {
+    color: #e5c890;
+    margin: 0.75rem 0 0.5rem 0;
+}
+
+main h4 {
+    color: #a6d189;
+    margin: 0.75rem 0 0.25rem 0;
+}
+
+main p {
+    line-height: 1.25;
+    text-align: justify;
+    margin: 0.75rem 0 0.25rem 0;
+}
+
+main a:link {
+    color: #85c1dc;
+    text-decoration: none;
+}
+
+main a:visited {
+    color: #8caaee;
+    text-decoration: none;
+}
+
+main a:hover {
+    color: #a3e0fc;
+    text-decoration: underline;
+}
+
+main a:active {
+    color: #e5f6ff;
+    text-decoration: underline;
+}
+
+.formblock {
+    margin: 1em;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #232634;
+    padding: 2rem;
+}
+
+/* for mobile yeah I gotchu man */
+@media (max-width: 768px) {
+    #headicon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .titlebar p {
+        font-size: 1.25rem;
+    }
+
+    .navbar p {
+        font-size: 1rem;
+    }
+}
