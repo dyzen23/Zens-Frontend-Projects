@@ -7,7 +7,7 @@ This repository is home for my small frontend projects, where I keep all the pro
 ## Contents (Preview)
 
 - [Single-page CV](https://dyzen23.github.io/Zens-Frontend-Projects/Single-page-CV/)
-- [Basic HTML Site](https://dyzen23.github.io/Zens-Frontend-Projects/Basic-HTML-Site/)
+- [Basic HTML & Portfolio Website](https://dyzen23.github.io/Zens-Frontend-Projects/Basic-HTML-Site/)
 - _more added later_
 
 ## Credits
@@ -15,10 +15,11 @@ This repository is home for my small frontend projects, where I keep all the pro
 - Thanks to roadmap.sh for the project ideas and roadmap to keep me on track. Check out all the ideas you can do [here](https://roadmap.sh/frontend/projects)
 - [W3Schools](https://www.w3schools.com/) for the tutorials
 - [freecodecamp.org](https://www.freecodecamp.org/) for teaching the basics
-- [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/) for more advance stuff
+- [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/) for more in-depth stuff
 - _more added later_
 
 ## Project URL
 
 - https://roadmap.sh/projects/single-page-cv
 - https://roadmap.sh/projects/basic-html-website
+- https://roadmap.sh/projects/portfolio-website

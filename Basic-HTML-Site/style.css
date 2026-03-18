@@ -18,21 +18,24 @@ body {
 }
 
 #headicon {
-    width: 2.25rem;
-    height: 2.25rem;
+    width: 2rem;
+    height: 2rem;
 }
 
 #headicon path {
-    width: 2.25rem;
+    width: 2rem;
     fill: #e5c890;
 }
 
 header {
+    background-color: #292c3c;
+    padding: 2rem;
+}
+
+.toppest {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #292c3c;
-    padding: 2rem;
 }
 
 .titlebar {
@@ -44,9 +47,9 @@ header {
 
 .titlebar p {
     text-align: left;
-    font-size: 2.25rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #81c8be;
+    color: #c6d0f5;
 }
 
 .navbar {
@@ -75,45 +78,81 @@ header {
     text-shadow: 0 0 10px #c6d0f5;
 }
 
+/* thing to put slash after p in navbar */
 .navbar p::after {
     content: " /";
 }
 
-/* remove slash from the last item */
+/* remove the last slash */
 .navbar p:last-child::after {
     content: "";
 }
 
+.banner {
+    text-align: center;
+    margin: 5rem;
+}
+
+.banner h1 {
+    color: #81c8be;
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+.banner p {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+
 main {
-    padding: 2rem;
     display: flex;
     flex: 1;
-    justify-content: center;
-    align-content: center;
+    align-items: stretch;
+    padding: 0;
+    flex-wrap: wrap;
 }
 
 main div.content {
+    flex: 1;
     width: 50rem;
+    padding: 2rem 2rem;
+}
+
+main div.content-full {
+    width: 100%;
+    padding: 2rem;
+    flex-basis: 100%;
+    text-align: center;
+}
+
+main div.quotes {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+blockquote {
+    width: 20%;
 }
 
 main div.sidebar-left,
 main div.sidebar-right {
-    width: 20%;
+    width: 30%;
     background-color: #414559;
-    padding: 1rem;
+    padding: 1.5rem 2rem;
 }
 
 main div.sidebar-left {
-    margin: 0 2rem 0 0;
+    margin: 0;
 }
 
 main div.sidebar-right {
-    margin: 0 0 0 2rem;
+    margin: 0;
 }
 
 main h1 {
     color: #ca9ee6;
     margin: 1rem 0 1rem 0;
+    text-align: center;
 }
 
 main h2 {
@@ -167,25 +206,96 @@ footer {
     justify-content: center;
     background-color: #232634;
     padding: 2rem;
+    margin-top: 1rem;
+}
+
+/* contact form styling */
+
+#contactpage div.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formcontainer {
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+}
+
+form {
+    background-color: #414559;
+    padding: 20px;
+}
+
+label {
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea[name="message"] {
+    background-color: #303446;
+    color: #c6d0f5;
+    border: 1px solid #c6d0f58e;
+    font-family: "Cascadia Mono", sans-serif; /* browsers don't inherit fonts into inputs by default! */
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    height: 2rem;
+    padding: 8px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+textarea[name="message"] {
+    width: 100%;
+    height: 4rem;
+    padding: 8px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 50%;
+    background-color: #a6d189;
+    color: #232634;
+    padding: 8px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #81c8be;
+    box-shadow: 0 0 10px rgb(249, 255, 253);
 }
 
 /* for mobile yeah I gotchu man */
 
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
         padding: 1rem;
     }
 
+    .toppest {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
     #headicon {
-        width: 1.5rem;
-        height: 1.5rem;
+        width: 1.25rem;
+        height: 1.25rem;
     }
 
     .titlebar p {
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 
     .navbar {
@@ -195,28 +305,59 @@ footer {
     }
 
     .navbar p {
+        font-size: 0.9rem;
+    }
+
+    .banner {
+        margin: 2rem 1rem;
+    }
+
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .banner p {
         font-size: 1rem;
     }
 
     main {
         flex-direction: column;
-        padding: 1rem;
+        gap: 0;
+        flex-wrap: nowrap;
     }
 
     main div.content {
-        width: 100%;
+        flex: 0;
+        padding: 1.5rem 1rem;
+        max-width: 100%;
     }
 
     main div.sidebar-left,
     main div.sidebar-right {
         width: 100%;
+        padding: 1rem;
+        margin: 0;
     }
 
-    main div.sidebar-left {
-        margin: 0 0 1rem 0;
+    main ul {
+        padding-left: 1rem;
     }
 
-    main div.sidebar-right {
-        margin: 1rem 0 0 0;
+    main div.content-full {
+        width: 100%;
+        margin: 1rem 0 1rem 0;
+    }
+
+    main div.quotes {
+        flex-direction: column;
+    }
+
+    blockquote {
+        width: 100%;
+        margin: 1.5rem 0;
+    }
+
+    .formcontainer {
+        width: 100%;
     }
 }
