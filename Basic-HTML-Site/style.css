@@ -89,10 +89,26 @@ main {
     display: flex;
     flex: 1;
     justify-content: center;
+    align-content: center;
 }
 
 main div.content {
     width: 50rem;
+}
+
+main div.sidebar-left,
+main div.sidebar-right {
+    width: 20%;
+    background-color: #414559;
+    padding: 1rem;
+}
+
+main div.sidebar-left {
+    margin: 0 2rem 0 0;
+}
+
+main div.sidebar-right {
+    margin: 0 0 0 2rem;
 }
 
 main h1 {
@@ -154,7 +170,15 @@ footer {
 }
 
 /* for mobile yeah I gotchu man */
+
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
     #headicon {
         width: 1.5rem;
         height: 1.5rem;
@@ -164,7 +188,35 @@ footer {
         font-size: 1.25rem;
     }
 
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0.5rem;
+    }
+
     .navbar p {
         font-size: 1rem;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    main div.content {
+        width: 100%;
+    }
+
+    main div.sidebar-left,
+    main div.sidebar-right {
+        width: 100%;
+    }
+
+    main div.sidebar-left {
+        margin: 0 0 1rem 0;
+    }
+
+    main div.sidebar-right {
+        margin: 1rem 0 0 0;
     }
 }
