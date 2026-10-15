@@ -78,12 +78,12 @@ header {
     text-shadow: 0 0 10px #c6d0f5;
 }
 
-/* thing to put slash after p in navbar */
+/* thingy to put slash after p in navbar */
 .navbar p::after {
     content: " /";
 }
 
-/* remove the last slash */
+/* remove the last slash just cause */
 .navbar p:last-child::after {
     content: "";
 }
