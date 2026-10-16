@@ -1,0 +1,180 @@
+<!-- prettier-ignore -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+
+        <link rel="icon" type="image/png" sizes="32x32" href="media/favicons/favicon-32x32.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="media/favicons/apple-touch-icon.png" />
+        <link rel="manifest" href="media/favicons/site.webmanifest" />
+
+        <meta name="description" content="Zen's favorite random things" />
+        <meta name="keywords" content="favorites, random, music, food, games" />
+        <meta name="author" content="Dyna Zenta" />
+
+        <title>Favorite Random Things - Zen's Basic Website</title>
+    </head>
+    <body>
+        <header>
+            <div class="toppest">
+                <div class="titlebar">
+                    <svg
+                        width="800px"
+                        height="800px"
+                        viewBox="0 0 20 20"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        id="headicon"
+                    >
+                        <title>emoji_neutral_square [#408]</title>
+                        <desc>Created with Sketch.</desc>
+                        <defs></defs>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g
+                                id="Dribbble-Light-Preview"
+                                transform="translate(-60.000000, -6359.000000)"
+                                fill="#000000"
+                            >
+                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                    <path
+                                        d="M16,6209 L20,6209 L20,6205 L16,6205 L16,6209 Z M8,6209 L12,6209 L12,6205 L8,6205 L8,6209 Z M8,6213 L20,6213 L20,6211 L8,6211 L8,6213 Z M6,6217 L22,6217 L22,6201 L6,6201 L6,6217 Z M4,6219 L24,6219 L24,6199 L4,6199 L4,6219 Z"
+                                        id="emoji_neutral_square-[#408]"
+                                    ></path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <p>Dyna Zenta (a.k.a Dyzen)</p>
+                </div>
+                <nav class="navbar">
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="projects.html">Projects</a></p>
+                    <p>
+                        <span class="dropdown">
+                            <input type="checkbox" id="dropdown-portfolio" class="dropdown-checkbox" />
+                            <label for="dropdown-portfolio" class="dropdown-btn">Portfolio</label>
+                            <span class="dropdown-content">
+                                <a href="photography.html">Photography</a>
+                                <a href="design.html">Design</a>
+                            </span>
+                        </span>
+                    </p>
+                    <p><a href="articles.html">Articles</a></p>
+                    <p><a href="funsies.html" class="active">Funsies</a></p>
+                    <p><a href="contact.html">Contact</a></p>
+                </nav>
+            </div>
+        </header>
+
+        <main id="randomfaves-page">
+            <div class="content">
+                <h1>Zen's Favorite Random Things</h1>
+                <p style="text-align: center">Stuff I like. <a href="funsies.html">Back to Funsies</a></p>
+                <div class="fave-random">
+                    <button type="button" id="fave-pick">Pick a random fave</button>
+                    <p id="fave-result" aria-live="polite">Press the button and I'll pick one for you.</p>
+                </div>
+                <div class="fave-grid">
+                    <section class="fave-card">
+                        <h3>Artists</h3>
+                        <ul>
+                            <li>Ninajirachi</li>
+                            <li>Porter Robinson</li>
+                            <li>Three Man Down</li>
+                        </ul>
+                    </section>
+                    <section class="fave-card">
+                        <h3>Food and Beverages</h3>
+                        <ul>
+                            <li>Matcha latte</li>
+                            <li>Pecel lele</li>
+                            <li>Indomie goreng with egg</li>
+                        </ul>
+                    </section>
+                    <section class="fave-card">
+                        <h3>Games</h3>
+                        <ul>
+                            <li>Geometry Dash</li>
+                            <li>Minecraft</li>
+                            <li>Need For Speed: Most Wanted</li>
+                        </ul>
+                    </section>
+                    <section class="fave-card">
+                        <h3>Star Wars Characters</h3>
+                        <ul>
+                            <li>Mando/Din Djarin</li>
+                            <li>Luke Skywalker</li>
+                            <li>General Grievous (hello there)</li>
+                        </ul>
+                    </section>
+                    <section class="fave-card">
+                        <h3>Cars</h3>
+                        <ul>
+                            <li>Mazda RX-7 FD</li>
+                            <li>2006 Nissan <s>Grand</s> Livina</li>
+                            <li>Collin McRae's Subaru Impreza 22B STi</li>
+                        </ul>
+                    </section>
+                    <section class="fave-card">
+                        <h3>Things</h3>
+                        <ul>
+                            <li>Stickers</li>
+                            <li>Cute notebooks</li>
+                            <li>Trinkets</li>
+                        </ul>
+                    </section>
+                    <section class="fave-card">
+                        <h3>TV Series</h3>
+                        <ul>
+                            <li>Andor</li>
+                            <li>The Gifted (the Thailand one)</li>
+                            <li>The Mandalorian</li>
+                        </ul>
+                    </section>
+                    <section class="fave-card">
+                        <h3>Movies</h3>
+                        <ul>
+                            <li>Project Hail Mary</li>
+                            <li>Star Wars Episode III: Revenge of The Sith</li>
+                            <li>Transformers One</li>
+                        </ul>
+                    </section>
+                    <section class="fave-card">
+                        <h3>Aesthetics</h3>
+                        <ul>
+                            <li>Frutiger Aero</li>
+                            <li>Dreamcore</li>
+                            <li>Webcore</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; all rights reserved 2026</p>
+        </footer>
+
+        <script>
+            const pickBtn = document.getElementById("fave-pick");
+            const result = document.getElementById("fave-result");
+
+            pickBtn.addEventListener("click", () => {
+                const items = Array.from(document.querySelectorAll(".fave-card li"));
+                if (items.length === 0) return;
+
+                document.querySelectorAll(".fave-picked").forEach((li) => li.classList.remove("fave-picked"));
+
+                const picked = items[Math.floor(Math.random() * items.length)];
+                picked.classList.add("fave-picked");
+
+                const category = picked.closest(".fave-card").querySelector("h3").textContent;
+                result.textContent = category + ": " + picked.textContent;
+                picked.scrollIntoView({ behavior: "smooth", block: "center" });
+            });
+        </script>
+    </body>
+</html>

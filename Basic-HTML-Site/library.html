@@ -1,0 +1,273 @@
+<!-- prettier-ignore -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+
+        <link rel="icon" type="image/png" sizes="32x32" href="media/favicons/favicon-32x32.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="media/favicons/apple-touch-icon.png" />
+        <link rel="manifest" href="media/favicons/site.webmanifest" />
+
+        <meta name="description" content="Zen's E-Library - my personal book collection" />
+        <meta name="keywords" content="books, library, catalogue, collection" />
+        <meta name="author" content="Dyna Zenta" />
+
+        <title>E-Library - Zen's Basic Website</title>
+    </head>
+    <body>
+        <header>
+            <div class="toppest">
+                <div class="titlebar">
+                    <svg
+                        width="800px"
+                        height="800px"
+                        viewBox="0 0 20 20"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        id="headicon"
+                    >
+                        <title>emoji_neutral_square [#408]</title>
+                        <desc>Created with Sketch.</desc>
+                        <defs></defs>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g
+                                id="Dribbble-Light-Preview"
+                                transform="translate(-60.000000, -6359.000000)"
+                                fill="#000000"
+                            >
+                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                    <path
+                                        d="M16,6209 L20,6209 L20,6205 L16,6205 L16,6209 Z M8,6209 L12,6209 L12,6205 L8,6205 L8,6209 Z M8,6213 L20,6213 L20,6211 L8,6211 L8,6213 Z M6,6217 L22,6217 L22,6201 L6,6201 L6,6217 Z M4,6219 L24,6219 L24,6199 L4,6199 L4,6219 Z"
+                                        id="emoji_neutral_square-[#408]"
+                                    ></path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <p>Dyna Zenta (a.k.a Dyzen)</p>
+                </div>
+                <nav class="navbar">
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="projects.html">Projects</a></p>
+                    <p>
+                        <span class="dropdown">
+                            <input type="checkbox" id="dropdown-portfolio" class="dropdown-checkbox" />
+                            <label for="dropdown-portfolio" class="dropdown-btn">Portfolio</label>
+                            <span class="dropdown-content">
+                                <a href="photography.html">Photography</a>
+                                <a href="design.html">Design</a>
+                            </span>
+                        </span>
+                    </p>
+                    <p><a href="articles.html">Articles</a></p>
+                    <p><a href="funsies.html" class="active">Funsies</a></p>
+                    <p><a href="contact.html">Contact</a></p>
+                </nav>
+            </div>
+        </header>
+
+        <main id="librarypage">
+            <div class="content lib">
+                <h1>Zen's E-Library</h1>
+                <p style="text-align: center">My personal book collection</p>
+
+                <div class="lib-controls">
+                    <input
+                        type="search"
+                        id="lib-search"
+                        placeholder="Search title, author, or genre"
+                        aria-label="Search books"
+                    />
+
+                    <select id="lib-sort" aria-label="Sort books">
+                        <option value="title">Sort: Title</option>
+                        <option value="author">Sort: Author</option>
+                        <option value="year">Sort: Year (newest)</option>
+                        <option value="rating">Sort: Rating</option>
+                    </select>
+                </div>
+
+                <div class="lib-filters" id="lib-filters" role="group" aria-label="Filter by reading status">
+                    <button type="button" class="lib-filter active" data-status="all">All</button>
+                    <button type="button" class="lib-filter" data-status="read">Read</button>
+                    <button type="button" class="lib-filter" data-status="reading">Reading</button>
+                    <button type="button" class="lib-filter" data-status="to-read">To read</button>
+                </div>
+
+                <p class="lib-count" id="lib-count" aria-live="polite"></p>
+
+                <div class="lib-grid" id="lib-grid"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; all rights reserved 2026</p>
+        </footer>
+
+        <script>
+            const books = [
+                {
+                    title: "Project Hail Mary",
+                    author: "Andy Weir",
+                    year: 2021,
+                    genre: "Sci-Fi",
+                    status: "reading",
+                    rating: 0,
+                    cover: "media/book-covers/phm.jpg",
+                    link: "",
+                },
+                {
+                    title: "Burning Heat",
+                    author: "Akiyoshi Rikako",
+                    year: 2021,
+                    genre: "Mystery",
+                    status: "read",
+                    rating: 4,
+                    cover: "media/book-covers/burningheat.jpg",
+                    link: "",
+                },
+                {
+                    title: "Convenience Store Woman",
+                    author: "Sayaka Murata",
+                    year: 2016,
+                    genre: "Novel",
+                    status: "read",
+                    rating: 4,
+                    cover: "media/book-covers/konbini.jpg",
+                    link: "",
+                },
+                {
+                    title: "1984",
+                    author: "George Orwell",
+                    year: 1949,
+                    genre: "Sci-Fi",
+                    status: "read",
+                    rating: 3,
+                    cover: "media/book-covers/1984.jpg",
+                    link: "",
+                },
+            ];
+
+            const STATUS_LABEL = { read: "Read", reading: "Reading", "to-read": "To read" };
+            const SPINE_COLORS = [
+                "#ca9ee6",
+                "#e78284",
+                "#e5c890",
+                "#a6d189",
+                "#81c8be",
+                "#8caaee",
+                "#ef9f76",
+                "#f4b8e4",
+            ];
+
+            const grid = document.getElementById("lib-grid");
+            const searchInput = document.getElementById("lib-search");
+            const sortSelect = document.getElementById("lib-sort");
+            const countEl = document.getElementById("lib-count");
+            const filterBtns = document.querySelectorAll(".lib-filter");
+
+            let activeStatus = "all";
+
+            function colorFor(title) {
+                let hash = 0;
+                for (const ch of title) hash = (hash * 31 + ch.charCodeAt(0)) >>> 0;
+                return SPINE_COLORS[hash % SPINE_COLORS.length];
+            }
+
+            function el(tag, className, text) {
+                const node = document.createElement(tag);
+                if (className) node.className = className;
+                if (text !== undefined) node.textContent = text;
+                return node;
+            }
+
+            function stars(rating) {
+                if (!rating) return "Not rated";
+                return "★".repeat(rating) + "☆".repeat(5 - rating);
+            }
+
+            function buildCard(book) {
+                const card = el("article", "lib-card");
+
+                const cover = el("div", "lib-cover");
+                if (book.cover) {
+                    const img = document.createElement("img");
+                    img.src = book.cover;
+                    img.alt = "Cover of " + book.title;
+                    img.loading = "lazy";
+                    cover.appendChild(img);
+                } else {
+                    cover.style.setProperty("--spine", colorFor(book.title));
+                    cover.classList.add("lib-cover-generated");
+                    cover.appendChild(el("span", "lib-cover-title", book.title));
+                    cover.appendChild(el("span", "lib-cover-author", book.author));
+                }
+                card.appendChild(cover);
+
+                const info = el("div", "lib-info");
+
+                let titleNode;
+                if (book.link) {
+                    titleNode = el("h3");
+                    const a = el("a", "", book.title);
+                    a.href = book.link;
+                    a.target = "_blank";
+                    a.rel = "noopener";
+                    titleNode.appendChild(a);
+                } else {
+                    titleNode = el("h3", "", book.title);
+                }
+                info.appendChild(titleNode);
+
+                info.appendChild(el("p", "lib-author", book.author));
+                info.appendChild(el("p", "lib-meta", book.genre + ", " + book.year));
+                info.appendChild(el("p", "lib-stars", stars(book.rating)));
+                info.appendChild(el("span", "lib-badge lib-badge-" + book.status, STATUS_LABEL[book.status]));
+
+                card.appendChild(info);
+                return card;
+            }
+
+            function render() {
+                const query = searchInput.value.trim().toLowerCase();
+                const sortBy = sortSelect.value;
+
+                const results = books
+                    .filter((b) => activeStatus === "all" || b.status === activeStatus)
+                    .filter((b) => !query || (b.title + " " + b.author + " " + b.genre).toLowerCase().includes(query))
+                    .sort((a, b) => {
+                        if (sortBy === "year") return b.year - a.year;
+                        if (sortBy === "rating") return b.rating - a.rating;
+                        return a[sortBy].localeCompare(b[sortBy]);
+                    });
+
+                grid.replaceChildren();
+
+                if (results.length === 0) {
+                    grid.appendChild(el("p", "lib-empty", "No books match. Try a different search or filter."));
+                } else {
+                    results.forEach((book) => grid.appendChild(buildCard(book)));
+                }
+
+                countEl.textContent = "Showing " + results.length + " of " + books.length + " books";
+            }
+
+            searchInput.addEventListener("input", render);
+            sortSelect.addEventListener("change", render);
+
+            filterBtns.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    filterBtns.forEach((b) => b.classList.remove("active"));
+                    btn.classList.add("active");
+                    activeStatus = btn.dataset.status;
+                    render();
+                });
+            });
+
+            render();
+        </script>
+    </body>
+</html>

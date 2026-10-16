@@ -6,15 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
 
-        <!-- Standard favicons -->
-        <link rel="icon" type="image/x-icon" href="media/favicons/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="16x16" href="media/favicons/favicon-16x16.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="media/favicons/favicon-32x32.png" />
-
-        <!-- Apple touch icon -->
         <link rel="apple-touch-icon" sizes="180x180" href="media/favicons/apple-touch-icon.png" />
-
-        <!-- Android Chrome -->
         <link rel="manifest" href="media/favicons/site.webmanifest" />
 
         <!-- SEO Meta Tags -->
@@ -26,8 +19,10 @@
         <meta property="og:title" content="Dyna Zenta - Frontend Developer" />
         <meta property="og:type" content="website" />
         <meta property="og:description" content="my basic website" />
-        <meta property="og:image" content="https://yoursite.com/preview.png" />
-        <!-- ^ My Github Page Preview PNG Link Here (addlater) -->
+        <meta
+            property="og:image"
+            content="https://dyzen23.github.io/zens-Frontend-Projects/basic-HTML-Site/website-preview.png"
+        />
         <meta property="og:url" content="https://dyzen23.github.io/Zens-Frontend-Projects/Basic-HTML-Site/" />
 
         <title>Projects - Zen's Basic Website</title>
@@ -68,14 +63,24 @@
                 <nav class="navbar">
                     <p><a href="index.html">Home</a></p>
                     <p><a href="projects.html" class="active">Projects</a></p>
-                    <p><a href="portfolio.html">Portfolio</a></p>
+                    <p>
+                        <span class="dropdown">
+                            <input type="checkbox" id="dropdown-portfolio" class="dropdown-checkbox" />
+                            <label for="dropdown-portfolio" class="dropdown-btn">Portfolio</label>
+                            <span class="dropdown-content">
+                                <a href="photography.html">Photography</a>
+                                <a href="design.html">Design</a>
+                            </span>
+                        </span>
+                    </p>
                     <p><a href="articles.html">Articles</a></p>
+                    <p><a href="funsies.html">Funsies</a></p>
                     <p><a href="contact.html">Contact</a></p>
                 </nav>
             </div>
         </header>
         <main>
-            <div class="content">
+            <div class="content longtext-box">
                 <h1>Projects</h1>
                 <h2><a href="../Single-page-CV/index.html">Single-page CV</a></h2>
                 <p>
@@ -84,9 +89,9 @@
                 </p>
                 <h2>Basic HTML Site</h2>
                 <p>
-                    Is is a second project from <a href="https://roadmap.sh/projects/">roadmap.sh</a> that I did right
+                    This is a second project from <a href="https://roadmap.sh/projects/">roadmap.sh</a> that I did right
                     after I finished my first, making a single-page CV. Well, the prompt said that I don't need to do
-                    any styling but I guess you can se what I did here. This is what happened when I started to
+                    any styling but I guess you can see what I did here. This is what happened when I started to
                     hyperfixate on something but unfortunately this only occur once every blood moon alias, it's a very
                     rare moment that I'm actually locked in on my hobby.
                 </p>
@@ -100,7 +105,7 @@
                     pallete!
                 </p>
                 <h2>
-                    Funsies: Personal Website <a href="https://dynazenta.neocities.org/">(dynazenta.neocities.org)</a>
+                    fun stuff: Personal Website <a href="https://dynazenta.neocities.org/">(dynazenta.neocities.org)</a>
                 </h2>
                 <p>
                     My contribution to the indie web movement. Making a website to keep track on my interests and learn

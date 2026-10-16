@@ -160,6 +160,15 @@ main h2 {
     margin: 0.75rem 0 0.75rem 0;
 }
 
+main h2 a {
+    color: #e18484;
+    text-decoration: underline;
+}
+
+main h2 a:visited {
+    color: #ff76bd;
+}
+
 main h3 {
     color: #e5c890;
     margin: 0.75rem 0 0.5rem 0;
@@ -200,6 +209,20 @@ main a:active {
     margin: 1em;
 }
 
+.ig-posts {
+    display: flex;
+    justify-content: center;
+}
+
+.posters-plural {
+    text-align: center;
+}
+
+.poster {
+    margin: 10px;
+    max-width: 450px;
+}
+
 footer {
     display: flex;
     align-items: center;
@@ -207,6 +230,460 @@ footer {
     background-color: #232634;
     padding: 2rem;
     margin-top: 1rem;
+}
+
+/* article page stuff */
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 0;
+}
+
+.one-article {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #414559;
+    background-color: #292c3c;
+    padding: 1rem 2rem 1rem 2rem;
+    margin: 2rem;
+    flex: 1 0 40%;
+    max-width: 45rem;
+}
+
+.one-article:hover {
+    border-color: #e78284;
+    box-shadow: 0 0 10px #232634;
+}
+
+.articles .article-link,
+.articles a:hover {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+main .articles a:link,
+main .articles a:visited {
+    color: #c6d0f5;
+}
+
+.longtext-box {
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+
+/* funsies stuff */
+
+#funsies-page {
+    align-content: flex-start;
+}
+
+.funsies-box {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2rem;
+    flex-basis: 100%;
+    padding: 2rem;
+}
+
+main a.funsies-item,
+main a.funsies-item:link,
+main a.funsies-item:visited {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    width: 500px;
+    max-width: 100%;
+    min-height: 300px;
+    padding: 2rem;
+    border: 1px solid #414559;
+    background-color: #292c3c;
+    color: #c6d0f5;
+    text-align: center;
+    text-decoration: none;
+}
+
+main a.funsies-item:hover {
+    color: #c6d0f5;
+    text-decoration: none;
+    box-shadow: 0 0 10px #232634;
+}
+
+main a.funsies-item-library:hover {
+    border-color: #81c8be;
+}
+
+main a.funsies-item-faves:hover {
+    border-color: #e5c890;
+}
+
+.funsies-item h2 {
+    margin: 0;
+}
+
+.funsies-item-library h2 {
+    color: #81c8be;
+}
+
+.funsies-item-faves h2 {
+    color: #e5c890;
+}
+
+.funsies-item p {
+    margin: 0;
+    text-align: center;
+}
+
+.funsies-cta {
+    margin-top: 0.5rem;
+    padding-bottom: 0.1rem;
+    border-bottom: 1px solid #c6d0f58e;
+    font-size: 0.9rem;
+}
+
+.funsies-item:hover .funsies-cta {
+    border-bottom-color: #c6d0f5;
+}
+
+/* photography stuff */
+
+.gallery {
+    column-width: 260px;
+    column-gap: 12px;
+    max-width: 1100px; /* batas lebar galeri, ubah sesuai selera */
+    margin-inline: auto; /* ini yang membuatnya di tengah */
+}
+
+.shot {
+    position: relative;
+    margin: 0 0 12px;
+    break-inside: avoid;
+    background: #8884;
+    overflow: hidden;
+}
+
+.shot .open {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: zoom-in;
+}
+
+.shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.shot:hover img,
+.shot .open:focus-visible img {
+    transform: scale(1.03);
+}
+
+.shot .open:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: -3px;
+}
+
+.shot figcaption {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 24px 10px 8px;
+    font-size: 0.85rem;
+    color: #fff;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    opacity: 0;
+    transition: opacity 0.25s;
+    pointer-events: none;
+}
+
+.shot:hover figcaption,
+.shot:focus-within figcaption {
+    opacity: 1;
+}
+
+@media (hover: none) {
+    .shot figcaption {
+        opacity: 1;
+    }
+}
+
+/* e-library stuff */
+
+#librarypage {
+    align-content: flex-start;
+}
+
+#librarypage div.content {
+    flex-basis: 100%;
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+.lib-controls {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.lib-controls input,
+.lib-controls select {
+    background-color: #414559;
+    color: #c6d0f5;
+    border: 1px solid #c6d0f58e;
+    font-family: "Cascadia Mono", sans-serif;
+    padding: 0.5rem 0.75rem;
+    height: 2.5rem;
+}
+
+.lib-controls input {
+    flex: 1;
+}
+
+.lib-controls input:focus,
+.lib-controls select:focus,
+.lib-filter:focus-visible {
+    outline: 2px solid #81c8be;
+    outline-offset: 2px;
+}
+
+.lib-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.lib-filter {
+    background-color: transparent;
+    color: #c6d0f5;
+    border: 1px solid #51576d;
+    font-family: "Cascadia Mono", sans-serif;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+}
+
+.lib-filter:hover {
+    border-color: #c6d0f5;
+}
+
+.lib-filter.active {
+    background-color: #a6d189;
+    border-color: #a6d189;
+    color: #232634;
+}
+
+.lib-count {
+    margin: 1rem 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #a5adce;
+    text-align: left;
+}
+
+.lib-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.lib-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #414559;
+    background-color: #292c3c;
+}
+
+.lib-card:hover {
+    border-color: #51576d;
+    box-shadow: 0 0 10px #232634;
+}
+
+/* e-lib book covers */
+
+.lib-cover {
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+}
+
+.lib-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.lib-cover-generated {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 0.75rem 1rem 1.25rem;
+    background-color: #414559;
+    border-left: 0.6rem solid var(--spine);
+}
+
+.lib-cover-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: var(--spine);
+    overflow-wrap: anywhere;
+}
+
+.lib-cover-author {
+    font-size: 0.75rem;
+    color: #a5adce;
+}
+
+/* card text */
+
+.lib-info {
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    flex: 1;
+}
+
+.lib-info h3 {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+.lib-info h3 a {
+    color: #e5c890;
+}
+
+main .lib-info p {
+    margin: 0;
+    text-align: left;
+    font-size: 0.8rem;
+}
+
+main .lib-info .lib-meta {
+    color: #a5adce;
+}
+
+main .lib-info .lib-stars {
+    color: #e5c890;
+}
+
+.lib-badge {
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 0.15rem 0.5rem;
+    font-size: 0.75rem;
+    color: #232634;
+}
+
+.lib-badge-read {
+    background-color: #a6d189;
+}
+
+.lib-badge-reading {
+    background-color: #e5c890;
+}
+
+.lib-badge-to-read {
+    background-color: #8caaee;
+}
+
+main .lib-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* random faves page */
+
+#randomfaves-page {
+    align-content: flex-start;
+}
+
+#randomfaves-page div.content {
+    flex-basis: 100%;
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+.fave-random {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0 0 0;
+    padding: 1rem 1.25rem;
+    background-color: #414559;
+}
+
+.fave-random button {
+    background-color: #a6d189;
+    color: #232634;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-family: "Cascadia Mono", sans-serif;
+    cursor: pointer;
+}
+
+.fave-random button:hover {
+    background-color: #81c8be;
+    box-shadow: 0 0 10px rgb(249, 255, 253);
+}
+
+.fave-random button:focus-visible {
+    outline: 2px solid #81c8be;
+    outline-offset: 2px;
+}
+
+main .fave-random p {
+    margin: 0;
+    text-align: left;
+    color: #e5c890;
+}
+
+.fave-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.fave-card {
+    border: 1px solid #414559;
+    background-color: #292c3c;
+    padding: 1rem 1.25rem;
+}
+
+.fave-card h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+.fave-card ul {
+    padding-left: 1.25rem;
+}
+
+.fave-card li {
+    margin: 0.4rem 0;
+    line-height: 1.35;
+}
+
+.fave-card li::marker {
+    color: #81c8be;
+}
+
+.fave-card li.fave-picked {
+    background-color: #e5c890;
+    color: #232634;
+    padding: 0 0.35rem;
 }
 
 /* contact form styling */
@@ -238,9 +715,8 @@ textarea[name="message"] {
     background-color: #303446;
     color: #c6d0f5;
     border: 1px solid #c6d0f58e;
-    font-family: "Cascadia Mono", sans-serif; /* browsers don't inherit fonts into inputs by default! */
+    font-family: "Cascadia Mono", sans-serif;
 }
-
 input[type="text"],
 input[type="email"] {
     width: 100%;
@@ -360,4 +836,96 @@ button[type="submit"]:hover {
     .formcontainer {
         width: 100%;
     }
+
+    .longtext-box {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    .lib-controls {
+        flex-direction: column;
+    }
+
+    .lib-grid {
+        grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+        gap: 1rem;
+    }
+    .funsies-box {
+        flex-direction: column;
+        flex-basis: auto;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    main a.funsies-item,
+    main a.funsies-item:link,
+    main a.funsies-item:visited {
+        width: 100%;
+        min-height: 12rem;
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* dropdown */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-checkbox {
+    display: none;
+}
+
+.dropdown-btn {
+    cursor: pointer;
+    color: #c6d0f5;
+    user-select: none;
+}
+
+.dropdown-btn:hover,
+.dropdown-btn.active {
+    color: #c6d0f5;
+    text-shadow: 0 0 10px #c6d0f5;
+}
+
+/* Menu kontainer dropdown */
+
+.dropdown-content {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #414559;
+    min-width: 10rem;
+    border: 1px solid #51576d;
+    border-radius: 1px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    margin-top: 0.5rem;
+    overflow: hidden;
+    transition:
+        opacity 0.2s ease 0.5s,
+        visibility 0s ease 1.1s;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    color: #c6d0f5;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background-color: #51576d;
+    color: #81c8be;
+    text-shadow: none;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
 }
